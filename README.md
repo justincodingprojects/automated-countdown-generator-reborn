@@ -10,7 +10,7 @@ Automated Countdown Generator is a web application that allows users to create c
 **O** ur<br/><br/>
 **R** emarkable<br></br>
 **N** ext Thing
-
+oof it is so hard to find an acronym for this :P
 ## Features
 - **Customizable Countdowns**: Create countdowns for your specific needs.
 - **User-Friendly Interface**: An intuitive and easy-to-use web interface.
