@@ -9,7 +9,7 @@ Automated Countdown Generator is a web application that allows users to create c
 **B** efore<br/><br/>
 **O** ur<br/><br/>
 **R** emarkable<br></br>
-**N** ext Thing
+**N** ext Thing<br></br>
 oof it is so hard to find an acronym for this :P
 ## Features
 - **Customizable Countdowns**: Create countdowns for your specific needs.
