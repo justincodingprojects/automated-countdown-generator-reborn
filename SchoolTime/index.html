@@ -143,6 +143,9 @@
     <select name="eventType" id="eventType">
       <option value="normal">Normal</option>
       <option value="earlydismissalday">Early Dismissal Day</option>
+      <option value="finals-wed">Finals (Wed)</option>
+      <option value="finals-thurs">Finals (Thurs)</option>
+      <option value="finals-fri">Finals (Fri)</option>
       <!--<option value="2hrearly">2 Hour Early Out</option>
       <option value="2hrlate">2 Hour Late Start</option>
       <option value="paws">Smart Block First</option>-->
@@ -358,6 +361,42 @@
       { name: "School has ended.", time: new Date(2000, 1, 1, 11, 35, 0, 0) },
       { name: "New Day", time: new Date(2000, 1, 1, 24, 0, 0, 0) }
     ];
+
+    const lehighSeniorWednesday = [
+      { name: "School hasn't started yet.", time: new Date(2000, 1, 1, 0, 0, 0, 0) },
+      { name: "Start of Day", time: new Date(2000, 1, 1, 6, 30, 0, 0) },
+      { name: "Rotation", time: new Date(2000, 1, 1, 6, 50, 0, 0) },
+      { name: "1st Period", time: new Date(2000, 1, 1, 7, 5, 0, 0) },
+      { name: "Rotation", time: new Date(2000, 1, 1, 8, 42, 0, 0) },
+      { name: "3rd Period", time: new Date(2000, 1, 1, 8, 47, 0, 0) },
+      { name: "Rotation", time: new Date(2000, 1, 1, 10, 24, 0, 0) },
+      { name: "5th Period", time: new Date(2000, 1, 1, 10, 29, 0, 0) },
+      { name: "Rotation", time: new Date(2000, 1, 1, 11, 53, 0, 0) },
+      { name: "6th Period", time: new Date(2000, 1, 1, 11, 58, 0, 0) },
+      { name: "School has ended.", time: new Date(2000, 1, 1, 13, 35, 0, 0) },
+      { name: "New Day", time: new Date(2000, 1, 1, 24, 0, 0, 0) }
+    ];
+
+    const lehighSeniorThursday = [
+      { name: "School hasn't started yet.", time: new Date(2000, 1, 1, 0, 0, 0, 0) },
+      { name: "Start of Day", time: new Date(2000, 1, 1, 6, 30, 0, 0) },
+      { name: "2nd Period", time: new Date(2000, 1, 1, 7, 35, 0, 0) },
+      { name: "Rotation", time: new Date(2000, 1, 1, 9, 30, 0, 0) },
+      { name: "4th Period", time: new Date(2000, 1, 1, 9, 40, 0, 0) },
+      { name: "School has ended.", time: new Date(2000, 1, 1, 11, 35, 0, 0) },
+      { name: "New Day", time: new Date(2000, 1, 1, 24, 0, 0, 0) }
+    ];
+
+    const lehighSeniorFriday = [
+      { name: "School hasn't started yet.", time: new Date(2000, 1, 1, 0, 0, 0, 0) },
+      { name: "Start of Day", time: new Date(2000, 1, 1, 6, 30, 0, 0) },
+      { name: "5th Period", time: new Date(2000, 1, 1, 7, 35, 0, 0) },
+      { name: "Rotation", time: new Date(2000, 1, 1, 9, 30, 0, 0) },
+      { name: "7th Period", time: new Date(2000, 1, 1, 9, 40, 0, 0) },
+      { name: "School has ended.", time: new Date(2000, 1, 1, 11, 35, 0, 0) },
+      { name: "New Day", time: new Date(2000, 1, 1, 24, 0, 0, 0) }
+    ];
+
     function load() {
       applySettings(((localStorage.getItem("school") !== null) ? localStorage.getItem("school") : "lehigh"), ((localStorage.getItem("dark") !== null) ? (localStorage.getItem("dark") === "true") : false), ((localStorage.getItem("mono") !== null) ? (localStorage.getItem("mono") === "true") : false), ((localStorage.getItem("eventtype") !== null) ? localStorage.getItem("eventtype") : "normal"), ((localStorage.getItem("timedelay") !== null) ? localStorage.getItem("timedelay") : 250), ((localStorage.getItem("offset") !== null) ? localStorage.getItem("offset") : 0));
       document.getElementById("dark").checked = ((localStorage.getItem("dark") !== null) ? (localStorage.getItem("dark") === "true") : false);
@@ -455,6 +494,15 @@
       }
       if (eventType == "earlydismissalday") {
         if (school == "lehigh") { selectedEvents = lehighSeniorEarlyDismissalDay; }
+      }
+      if (eventType == "finals-wed") {
+        if (school == "lehigh") { selectedEvents = lehighSeniorWednesday; }
+      }
+      if (eventType == "finals-thurs") {
+        if (school == "lehigh") { selectedEvents = lehighSeniorThursday; }
+      }
+      if (eventType == "finals-fri") {
+        if (school == "lehigh") { selectedEvents = lehighSeniorFriday; }
       }
       /*if (eventType == "2hrlate") {
         if (school == "wood") { selectedEvents = woodPeriods2hrLate; }
